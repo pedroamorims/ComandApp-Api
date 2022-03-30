@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComandApp.Domain", "ComandA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComandApp.Api", "ComandAppApi\ComandApp.Api.csproj", "{1F78EE28-EFE7-4043-B91A-6CA54C608414}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComandApp.Tests", "ComandApp.Tests\ComandApp.Tests.csproj", "{D7435A40-FCF1-4000-8F29-013B057BFBA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComandApp.Tests", "ComandApp.Tests\ComandApp.Tests.csproj", "{D7435A40-FCF1-4000-8F29-013B057BFBA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComandApp.Infra", "ComandApp.Infra\ComandApp.Infra.csproj", "{975F6F15-6494-4E89-9E5D-1135EE64A447}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComandApp.Infra", "ComandApp.Infra\ComandApp.Infra.csproj", "{975F6F15-6494-4E89-9E5D-1135EE64A447}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

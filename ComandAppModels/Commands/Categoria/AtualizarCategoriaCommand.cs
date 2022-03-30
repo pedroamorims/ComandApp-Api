@@ -21,9 +21,6 @@ namespace ComandApp.Domain.Commands
         public bool Ativo { get; set; }
         public string IconURL { get; set; }
 
-        public void AddNotifications(IEnumerable<Notification> notifications)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

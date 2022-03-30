@@ -1,3 +1,4 @@
+using ComandApp.Api.Services;
 using ComandApp.Domain.Handlers;
 using ComandApp.Domain.Respositories;
 using ComandApp.Infra.Contexts;
@@ -20,10 +21,17 @@ ConfigureServices(builder);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI();
+/*if (app.Environment.IsDevelopment())
+{
+}*/
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
@@ -33,7 +41,7 @@ LoadConfiguration(app);
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseResponseCompression();
-
+DatabaseManagementService.MigrationInitialisation(app);
 app.MapControllers();
 
 app.Run();

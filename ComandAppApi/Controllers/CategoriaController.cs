@@ -50,6 +50,17 @@ namespace ComandAppApi.Controllers
         }
 
 
+        [HttpGet("v2/categorias")]
+        public IActionResult GetV2([FromServices] ICategoriaRepository repository, [FromServices] IMemoryCache cache)
+        {
+
+            var categorias = repository.BuscarTodos();
+
+
+            return Ok(categorias);
+        }
+
+
         [HttpGet("v1/categorias/{id:int}")]
         public async Task<IActionResult> GetByIdAsync(
             [FromRoute] int id,

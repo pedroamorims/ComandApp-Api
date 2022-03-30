@@ -60,8 +60,8 @@ namespace ComandApp.Infra.Migrations
                     Nome = table.Column<string>(type: "NVARCHAR(80)", maxLength: 80, nullable: false),
                     Email = table.Column<string>(type: "VARCHAR(160)", maxLength: 160, nullable: false),
                     SenhaHash = table.Column<string>(type: "VARCHAR(255)", maxLength: 255, nullable: false),
-                    DataCriacao = table.Column<DateTime>(type: "SMALLDATETIME", nullable: false, defaultValue: new DateTime(2022, 3, 4, 18, 36, 8, 141, DateTimeKind.Utc).AddTicks(5157)),
-                    DataAlteracao = table.Column<DateTime>(type: "SMALLDATETIME", nullable: false, defaultValue: new DateTime(2022, 3, 4, 18, 36, 8, 141, DateTimeKind.Utc).AddTicks(5402))
+                    DataCriacao = table.Column<DateTime>(type: "SMALLDATETIME", nullable: false, defaultValue: new DateTime(2022, 3, 14, 12, 15, 30, 364, DateTimeKind.Utc).AddTicks(8000)),
+                    DataAlteracao = table.Column<DateTime>(type: "SMALLDATETIME", nullable: false, defaultValue: new DateTime(2022, 3, 14, 12, 15, 30, 364, DateTimeKind.Utc).AddTicks(8185))
                 },
                 constraints: table =>
                 {
@@ -78,7 +78,7 @@ namespace ComandApp.Infra.Migrations
                     Descricao = table.Column<string>(type: "NVARCHAR(150)", maxLength: 150, nullable: false),
                     CategoriaId = table.Column<int>(type: "int", nullable: true),
                     DataCriacao = table.Column<DateTime>(type: "SMALLDATETIME", nullable: false),
-                    DataAlteracao = table.Column<DateTime>(type: "SMALLDATETIME", nullable: false, defaultValue: new DateTime(2022, 3, 4, 15, 36, 8, 141, DateTimeKind.Local).AddTicks(1643))
+                    DataAlteracao = table.Column<DateTime>(type: "SMALLDATETIME", nullable: false, defaultValue: new DateTime(2022, 3, 14, 9, 15, 30, 364, DateTimeKind.Local).AddTicks(4462))
                 },
                 constraints: table =>
                 {
@@ -166,7 +166,7 @@ namespace ComandApp.Infra.Migrations
                     TamanhoId = table.Column<int>(type: "int", nullable: true),
                     Preco = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Quantidade = table.Column<int>(type: "int", nullable: false),
-                    DataPedido = table.Column<DateTime>(type: "SMALLDATETIME", nullable: false, defaultValue: new DateTime(2022, 3, 4, 15, 36, 8, 140, DateTimeKind.Local).AddTicks(9812)),
+                    DataPedido = table.Column<DateTime>(type: "SMALLDATETIME", nullable: false, defaultValue: new DateTime(2022, 3, 14, 9, 15, 30, 364, DateTimeKind.Local).AddTicks(2703)),
                     Entregue = table.Column<bool>(type: "bit", nullable: false, defaultValue: false)
                 },
                 constraints: table =>

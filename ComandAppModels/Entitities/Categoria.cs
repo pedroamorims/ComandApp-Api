@@ -9,23 +9,11 @@ namespace ComandApp.Domain.Entitities
             Descricao = descricao;
             Ativo = ativo;
             IconURL = iconURL;
-            Produtos = new List<Produto>();
         }
 
         public string Descricao { get; private set; }
         public bool Ativo { get; private set; }
         public string IconURL { get; private set; }
-
-        public IList<Produto> Produtos { get; private set; }
-
-        public void adicionarProduto(Produto produto)
-        {
-            if (produto is not null && !Produtos.Contains(produto))
-            {
-                Produtos.Add(produto);
-            }
-         
-        }
 
         public void Ativar()
         {

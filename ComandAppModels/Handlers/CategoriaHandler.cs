@@ -10,9 +10,7 @@ using System;
 
 namespace ComandApp.Domain.Handlers
 {
-    public class CategoriaHandler : Notifiable<Notification>, 
-        IHandler<CriarCategoriaCommand>, 
-        IHandler<AtualizarCategoriaCommand>
+    public class CategoriaHandler : Notifiable<Notification>, IHandler<CriarCategoriaCommand>, IHandler<AtualizarCategoriaCommand>
     {
         private readonly ICategoriaRepository _repository;
 

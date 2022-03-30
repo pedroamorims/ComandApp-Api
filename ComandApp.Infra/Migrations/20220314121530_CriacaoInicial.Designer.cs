@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ComandApp.Infra.Migrations
 {
     [DbContext(typeof(ComandAppDataContext))]
-    [Migration("20220304183608_CriacaoInicial")]
+    [Migration("20220314121530_CriacaoInicial")]
     partial class CriacaoInicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -89,7 +89,7 @@ namespace ComandApp.Infra.Migrations
                     b.Property<DateTime>("DataPedido")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("SMALLDATETIME")
-                        .HasDefaultValue(new DateTime(2022, 3, 4, 15, 36, 8, 140, DateTimeKind.Local).AddTicks(9812));
+                        .HasDefaultValue(new DateTime(2022, 3, 14, 9, 15, 30, 364, DateTimeKind.Local).AddTicks(2703));
 
                     b.Property<bool>("Entregue")
                         .ValueGeneratedOnAdd()
@@ -177,7 +177,7 @@ namespace ComandApp.Infra.Migrations
                     b.Property<DateTime>("DataAlteracao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("SMALLDATETIME")
-                        .HasDefaultValue(new DateTime(2022, 3, 4, 15, 36, 8, 141, DateTimeKind.Local).AddTicks(1643));
+                        .HasDefaultValue(new DateTime(2022, 3, 14, 9, 15, 30, 364, DateTimeKind.Local).AddTicks(4462));
 
                     b.Property<DateTime>("DataCriacao")
                         .HasColumnType("SMALLDATETIME");
@@ -246,12 +246,12 @@ namespace ComandApp.Infra.Migrations
                     b.Property<DateTime>("DataAlteracao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("SMALLDATETIME")
-                        .HasDefaultValue(new DateTime(2022, 3, 4, 18, 36, 8, 141, DateTimeKind.Utc).AddTicks(5402));
+                        .HasDefaultValue(new DateTime(2022, 3, 14, 12, 15, 30, 364, DateTimeKind.Utc).AddTicks(8185));
 
                     b.Property<DateTime>("DataCriacao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("SMALLDATETIME")
-                        .HasDefaultValue(new DateTime(2022, 3, 4, 18, 36, 8, 141, DateTimeKind.Utc).AddTicks(5157));
+                        .HasDefaultValue(new DateTime(2022, 3, 14, 12, 15, 30, 364, DateTimeKind.Utc).AddTicks(8000));
 
                     b.Property<string>("Email")
                         .IsRequired()
