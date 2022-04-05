@@ -16,8 +16,8 @@ namespace ComandAppModels.Dados.Mappings
 
             //Identity
             builder.Property(x => x.Id)
-                .ValueGeneratedOnAdd();
-              //  .UseIdentityColumn();
+                .ValueGeneratedOnAdd()
+                .UseIdentityColumn();
 
             //Propriedades
             builder.Property(x => x.Nome)
@@ -30,9 +30,13 @@ namespace ComandAppModels.Dados.Mappings
                 .HasColumnType("NVARCHAR")
                 .HasMaxLength(150);
 
+            builder.Property(x => x.Ativo)
+            .IsRequired();
+
             builder.Property(x => x.DataCriacao)
                 .IsRequired()
-                .HasColumnType("SMALLDATETIME");
+                .HasColumnType("SMALLDATETIME")
+                .HasDefaultValue(DateTime.Now);
 
 
             builder.Property(x => x.DataAlteracao)

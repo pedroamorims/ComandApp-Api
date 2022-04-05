@@ -21,5 +21,7 @@ namespace ComandApp.Domain.Respositories
         IEnumerable<ListarCategoriaViewModel> BuscarAtivos();
 
         IEnumerable<ListarCategoriaViewModel> BuscarInativos();
+
+        Categoria BuscarPorId(int id);
     }
 }

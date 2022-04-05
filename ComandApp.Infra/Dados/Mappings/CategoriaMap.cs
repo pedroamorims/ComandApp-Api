@@ -16,7 +16,8 @@ namespace ComandAppModels.Dados.Mappings
             builder.HasKey(x => x.Id);
 
             //Identity
-            builder.Property(x => x.Id).ValueGeneratedOnAdd();//.UseIdentityColumn();
+            builder.Property(x => x.Id).ValueGeneratedOnAdd()
+                .UseIdentityColumn();
 
             //Propriedades
             builder.Property(x => x.Descricao)
@@ -29,7 +30,7 @@ namespace ComandAppModels.Dados.Mappings
 
             // Indices
             builder.HasIndex(x => x.Descricao, "IX_Categoria_Descricao").IsUnique();
-    
+
 
         }
     }

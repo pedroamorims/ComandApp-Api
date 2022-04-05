@@ -76,6 +76,10 @@ namespace ComandApp.Infra.Repositories
                   }).Where(x => x.Ativo == true).ToList();
         }
 
+        public Categoria? BuscarPorId(int id)
+        {
+            return _context.Categorias!.AsNoTracking().FirstOrDefault(x => x.Id == id);
+        }
 
     }
 }

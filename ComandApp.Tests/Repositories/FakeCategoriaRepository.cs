@@ -21,6 +21,11 @@ namespace ComandApp.Tests.Repositories
             throw new NotImplementedException();
         }
 
+        public Categoria BuscarPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<ListarCategoriaViewModel> BuscarTodos()
         {
             throw new NotImplementedException();

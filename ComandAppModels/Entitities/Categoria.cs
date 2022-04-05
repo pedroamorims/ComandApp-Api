@@ -15,6 +15,8 @@ namespace ComandApp.Domain.Entitities
         public bool Ativo { get; private set; }
         public string IconURL { get; private set; }
 
+        public IList<Produto> Produtos { get; private set; }
+
         public void Ativar()
         {
             Ativo = true;

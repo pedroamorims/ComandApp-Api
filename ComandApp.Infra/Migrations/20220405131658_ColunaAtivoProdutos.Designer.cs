@@ -4,6 +4,7 @@ using ComandApp.Infra.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ComandApp.Infra.Migrations
 {
     [DbContext(typeof(ComandAppDataContext))]
-    partial class ComandAppDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220405131658_ColunaAtivoProdutos")]
+    partial class ColunaAtivoProdutos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,7 +89,7 @@ namespace ComandApp.Infra.Migrations
                     b.Property<DateTime>("DataPedido")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("SMALLDATETIME")
-                        .HasDefaultValue(new DateTime(2022, 4, 5, 14, 3, 28, 426, DateTimeKind.Local).AddTicks(2818));
+                        .HasDefaultValue(new DateTime(2022, 4, 5, 10, 16, 58, 812, DateTimeKind.Local).AddTicks(6516));
 
                     b.Property<bool>("Entregue")
                         .ValueGeneratedOnAdd()
@@ -178,12 +180,10 @@ namespace ComandApp.Infra.Migrations
                     b.Property<DateTime>("DataAlteracao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("SMALLDATETIME")
-                        .HasDefaultValue(new DateTime(2022, 4, 5, 14, 3, 28, 426, DateTimeKind.Local).AddTicks(5366));
+                        .HasDefaultValue(new DateTime(2022, 4, 5, 10, 16, 58, 812, DateTimeKind.Local).AddTicks(8746));
 
                     b.Property<DateTime>("DataCriacao")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("SMALLDATETIME")
-                        .HasDefaultValue(new DateTime(2022, 4, 5, 14, 3, 28, 426, DateTimeKind.Local).AddTicks(5072));
+                        .HasColumnType("SMALLDATETIME");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -249,12 +249,12 @@ namespace ComandApp.Infra.Migrations
                     b.Property<DateTime>("DataAlteracao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("SMALLDATETIME")
-                        .HasDefaultValue(new DateTime(2022, 4, 5, 17, 3, 28, 426, DateTimeKind.Utc).AddTicks(9493));
+                        .HasDefaultValue(new DateTime(2022, 4, 5, 13, 16, 58, 813, DateTimeKind.Utc).AddTicks(2952));
 
                     b.Property<DateTime>("DataCriacao")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("SMALLDATETIME")
-                        .HasDefaultValue(new DateTime(2022, 4, 5, 17, 3, 28, 426, DateTimeKind.Utc).AddTicks(9280));
+                        .HasDefaultValue(new DateTime(2022, 4, 5, 13, 16, 58, 813, DateTimeKind.Utc).AddTicks(2594));
 
                     b.Property<string>("Email")
                         .IsRequired()

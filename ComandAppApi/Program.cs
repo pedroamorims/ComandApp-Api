@@ -107,6 +107,9 @@ void ConfigureServices(WebApplicationBuilder builder)
     builder.Services.AddTransient<ICategoriaRepository, CategoriaRepository>();
     builder.Services.AddTransient<CategoriaHandler, CategoriaHandler>();
 
+    builder.Services.AddTransient<IProdutoRepository, ProdutoRepository>();
+    builder.Services.AddTransient<ProdutoHandler, ProdutoHandler>();
+
 
     //Token
     builder.Services.AddTransient<TokenService>(); //Sempre novo, usado para itens sem estado
