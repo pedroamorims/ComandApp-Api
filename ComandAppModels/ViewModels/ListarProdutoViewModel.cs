@@ -14,5 +14,7 @@ namespace ComandApp.Domain.ViewModels
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public bool Ativo { get; set; }
+
+        public ListarCategoriaViewModel Categoria { get; set; }
     }
 }

@@ -34,6 +34,8 @@ namespace ComandApp.Domain.Handlers
                 return new GenericCommandResult(false, "Ops, categoria informada não foi encontrada", command.CategoriaId);
             }
 
+
+
             Produto.defineCategoria(categoria);
 
             //Salvar no banco

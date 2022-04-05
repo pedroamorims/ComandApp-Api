@@ -47,7 +47,15 @@ namespace ComandApp.Infra.Repositories
                     {
                         Id = x.Id,
                         Descricao = x.Descricao,
-                        Ativo = x.Ativo
+                        Nome = x.Nome,
+                        Ativo = x.Ativo,
+                        Categoria = new ListarCategoriaViewModel
+                        {
+                            Id = x.Categoria.Id,
+                            Descricao = x.Categoria.Descricao,
+                            Ativo = x.Categoria.Ativo,
+                            iconURL = x.Categoria.IconURL
+                        }
                     }).ToList();
         }
 

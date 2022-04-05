@@ -36,7 +36,7 @@ namespace ComandAppApi.Controllers
 
 
         [HttpGet("v1/Produtos")]
-        public IActionResult GetV2([FromServices] IProdutoRepository repository, [FromServices] IMemoryCache cache)
+        public IActionResult Get([FromServices] IProdutoRepository repository, [FromServices] IMemoryCache cache)
         {
 
             var Produtos = repository.BuscarTodos();

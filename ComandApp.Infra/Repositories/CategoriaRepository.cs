@@ -78,7 +78,7 @@ namespace ComandApp.Infra.Repositories
 
         public Categoria? BuscarPorId(int id)
         {
-            return _context.Categorias!.AsNoTracking().FirstOrDefault(x => x.Id == id);
+            return _context.Categorias!.FirstOrDefault(x => x.Id == id);
         }
 
     }
