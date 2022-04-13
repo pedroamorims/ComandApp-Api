@@ -51,7 +51,7 @@ namespace ComandAppApi.Controllers
 
 
         [HttpGet("v2/categorias")]
-        public IActionResult GetV2([FromServices] ICategoriaRepository repository, [FromServices] IMemoryCache cache)
+        public IActionResult GetV2([FromServices] ICategoriaRepository repository)
         {
 
             var categorias = repository.BuscarTodos();
@@ -62,11 +62,12 @@ namespace ComandAppApi.Controllers
 
 
         [HttpGet("v1/categorias/{id:int}")]
-        public async Task<IActionResult> GetByIdAsync(
+        public IActionResult GetByIdAsync(
             [FromRoute] int id,
-            [FromServices] ComandAppDataContext context)
+            [FromServices] ICategoriaRepository repository)
         {
-            var categoria = await context.Categorias!.FirstOrDefaultAsync(x => x.Descricao == "");
+
+            var categoria = repository.BuscarPorId(id);
 
             if (categoria == null)
                 return NotFound();
