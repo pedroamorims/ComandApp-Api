@@ -76,9 +76,26 @@ namespace ComandApp.Infra.Repositories
                   }).Where(x => x.Ativo == true).ToList();
         }
 
-        public Categoria? BuscarPorId(int id)
+        public ListarCategoriaViewModel? BuscarPorId(int id, out Categoria? categoria)
         {
-            return _context.Categorias!.FirstOrDefault(x => x.Id == id);
+            categoria = _context.Categorias!.FirstOrDefault(x => x.Id == id);
+
+            if (categoria != null)
+            {
+                return new ListarCategoriaViewModel
+                {
+                    Id = categoria.Id,
+                    Descricao = categoria.Descricao,
+                    Ativo = categoria.Ativo,
+                    iconURL = categoria.IconURL
+                };
+            }
+
+            else
+            {
+               return null;
+            }
+
         }
 
     }

@@ -28,11 +28,13 @@ namespace ComandApp.Domain.Handlers
 
             var Produto = new Produto(command.Nome, command.Descricao, command.Ativo);
 
-            Categoria categoria = _repositorycategoria.BuscarPorId(command.CategoriaId);
-            if(categoria == null)
+            ListarCategoriaViewModel listarCategoria = _repositorycategoria.BuscarPorId(command.CategoriaId, out Categoria? categoria);
+
+            if (categoria == null)
             {
                 return new GenericCommandResult(false, "Ops, categoria informada não foi encontrada", command.CategoriaId);
             }
+
 
 
 

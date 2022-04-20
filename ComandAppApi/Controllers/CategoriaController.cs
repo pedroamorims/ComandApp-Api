@@ -62,12 +62,12 @@ namespace ComandAppApi.Controllers
 
 
         [HttpGet("v1/categorias/{id:int}")]
-        public IActionResult GetByIdAsync(
+        public IActionResult GetById(
             [FromRoute] int id,
             [FromServices] ICategoriaRepository repository)
         {
 
-            var categoria = repository.BuscarPorId(id);
+            var categoria = repository.BuscarPorId(id, out Categoria? category);
 
             if (categoria == null)
                 return NotFound();

@@ -36,31 +36,38 @@ namespace ComandAppApi.Controllers
 
 
         [HttpGet("v1/Produtos")]
-        public IActionResult Get([FromServices] IProdutoRepository repository, [FromServices] IMemoryCache cache)
+        public IActionResult Get([FromServices] IProdutoRepository repository, [FromServices] IMemoryCache cache, [FromQuery] int idCategoria)
         {
 
-            var Produtos = repository.BuscarTodos();
+   
+            if (idCategoria == 0)
+            {
+               var Produtos = repository.BuscarTodos();
+               return Ok(Produtos);
+            }
+            else
+            {
+                var Produtos = repository.BuscarPorCategoria(idCategoria);
+                return Ok(Produtos);
+            }
 
 
-            return Ok(Produtos);
+
         }
 
 
         [HttpGet("v1/Produtos/{id:int}")]
-        public async Task<IActionResult> GetByIdAsync(
+        public IActionResult GetById(
             [FromRoute] int id,
-            [FromServices] ComandAppDataContext context)
+            [FromServices] IProdutoRepository repository)
         {
-            var Produto = await context.Produtos!.FirstOrDefaultAsync(x => x.Id == id);
+            var Produto = repository.BuscarPorId(id);
 
             if (Produto == null)
                 return NotFound();
 
             return Ok(Produto);
         }
-
-
-
 
     }
 }
