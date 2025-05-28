@@ -110,6 +110,9 @@ void ConfigureServices(WebApplicationBuilder builder)
     builder.Services.AddTransient<IProdutoRepository, ProdutoRepository>();
     builder.Services.AddTransient<ProdutoHandler, ProdutoHandler>();
 
+    builder.Services.AddTransient<IComandaRepository, ComandaRepository>();
+    builder.Services.AddTransient<ComandaHandler, ComandaHandler>();
+
 
     //Token
     builder.Services.AddTransient<TokenService>(); //Sempre novo, usado para itens sem estado
